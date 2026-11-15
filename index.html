@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>KICHIWORKS（キチワークス）｜学びと遊びの小さな道具工房</title>
+<meta name="description" content="KICHIWORKS（キチワークス）は、学習と趣味のためのWebアプリを作る小さな工房です。中小企業診断士・MBA学習「ビズロギア」、ベースTAB譜自動生成「BassTab AI」、麻雀「雀聖AI」を公開しています。">
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<style>
+  :root {
+    --paper: #F8F5EE;
+    --ink: #2E2E4A;
+    --ink-soft: #5A5A78;
+    --accent: #676BB3;
+    --card: #FFFFFF;
+    --line: #E7E1D3;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: "Hiragino Maru Gothic ProN", "Hiragino Sans", "Noto Sans JP", sans-serif;
+    background: var(--paper);
+    color: var(--ink);
+    line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+  }
+  .wrap { max-width: 960px; margin: 0 auto; padding: 0 20px; }
+
+  header { text-align: center; padding: 72px 0 8px; }
+  .brand-badge {
+    display: inline-flex; align-items: center; justify-content: center;
+    width: 84px; height: 84px; border-radius: 26px;
+    background: var(--accent); color: #fff;
+    font-size: 2.6rem; font-weight: 800; letter-spacing: 0;
+    box-shadow: 0 10px 24px rgba(103, 107, 179, 0.35);
+    margin-bottom: 20px;
+  }
+  h1 { font-size: 2.2rem; letter-spacing: 0.12em; font-weight: 800; }
+  .brand-sub { color: var(--ink-soft); font-size: 0.95rem; letter-spacing: 0.3em; margin-top: 2px; }
+  .tagline { margin-top: 18px; font-size: 1.05rem; color: var(--ink-soft); }
+  .tagline strong { color: var(--ink); }
+
+  .apps { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; padding: 44px 0 12px; }
+  @media (max-width: 760px) { .apps { grid-template-columns: 1fr; } }
+  .app-card {
+    background: var(--card); border: 1px solid var(--line); border-radius: 24px;
+    padding: 28px 24px 24px; text-decoration: none; color: inherit;
+    display: flex; flex-direction: column; align-items: flex-start; gap: 10px;
+    box-shadow: 0 4px 14px rgba(46, 46, 74, 0.05);
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+  }
+  .app-card:hover { transform: translateY(-4px); box-shadow: 0 12px 28px rgba(46, 46, 74, 0.12); }
+  .app-icon {
+    width: 76px; height: 76px; border-radius: 22px; overflow: hidden;
+    display: flex; align-items: center; justify-content: center; font-size: 2.3rem;
+  }
+  .app-icon img { width: 100%; height: 100%; object-fit: cover; }
+  .icon-bizlogia { background: #E3E4F5; }
+  .icon-basstab { background: #0B1220; }
+  .icon-mahjong { background: #0B5340; border: 2px solid #C9A227; }
+  .app-name { font-size: 1.3rem; font-weight: 800; }
+  .app-cat { font-size: 0.78rem; font-weight: 700; letter-spacing: 0.08em; padding: 2px 10px; border-radius: 999px; }
+  .cat-bizlogia { background: #EDEBF9; color: #4C4F96; }
+  .cat-basstab { background: #E0F5FA; color: #0B7285; }
+  .cat-mahjong { background: #E7F2EC; color: #0B5340; }
+  .app-desc { font-size: 0.92rem; color: var(--ink-soft); flex: 1; }
+  .app-link { font-weight: 700; color: var(--accent); font-size: 0.95rem; }
+
+  .about {
+    margin: 36px 0 8px; background: var(--card); border: 1px solid var(--line);
+    border-radius: 24px; padding: 28px; box-shadow: 0 4px 14px rgba(46, 46, 74, 0.05);
+  }
+  .about h2 { font-size: 1.1rem; margin-bottom: 8px; }
+  .about p { font-size: 0.93rem; color: var(--ink-soft); }
+
+  footer { text-align: center; padding: 40px 0 56px; color: var(--ink-soft); font-size: 0.85rem; }
+  footer a { color: var(--accent); text-decoration: none; font-weight: 700; }
+</style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <div class="brand-badge">K</div>
+      <h1>KICHIWORKS</h1>
+      <div class="brand-sub">キチワークス</div>
+      <p class="tagline">小さな工房から、<strong>学び</strong>と<strong>遊び</strong>の道具をお届けします。<br>インストール不要、ブラウザですぐに使えるWebアプリを作っています。</p>
+    </header>
+
+    <main class="apps">
+      <a class="app-card" href="https://bizlogia.kichiworks.com/">
+        <div class="app-icon icon-bizlogia"><img src="assets/bizlogia-logo.webp" alt="ビズロギアのロゴ（フクロウのホウ助）"></div>
+        <div class="app-name">ビズロギア</div>
+        <span class="app-cat cat-bizlogia">中小企業診断士・MBA学習</span>
+        <p class="app-desc">演習問題1,666問と用語ドリルで、スキマ時間に効率よく学べる学習アプリ。フクロウの「ホウ助」が学習をサポートします。</p>
+        <span class="app-link">アプリを開く →</span>
+      </a>
+
+      <a class="app-card" href="https://basstab.kichiworks.com/">
+        <div class="app-icon icon-basstab">🎸</div>
+        <div class="app-name">BassTab AI</div>
+        <span class="app-cat cat-basstab">ベースTAB譜 自動生成</span>
+        <p class="app-desc">音源をアップロードするだけで、ベースのTAB譜を自動で作成。テンポ推定やリズム補正、MIDI書き出しにも対応しています。</p>
+        <span class="app-link">アプリを開く →</span>
+      </a>
+
+      <a class="app-card" href="https://mahjong.kichiworks.com/">
+        <div class="app-icon icon-mahjong">🀄</div>
+        <div class="app-name">雀聖AI</div>
+        <span class="app-cat cat-mahjong">麻雀 点数計算・CPU対局</span>
+        <p class="app-desc">点数計算と待ち牌ナビ、そしてCPU対局（四人／三人・北抜き対応）。対局は牌譜として保存され、あとから再生して振り返れます。</p>
+        <span class="app-link">アプリを開く →</span>
+      </a>
+    </main>
+
+    <section class="about">
+      <h2>KICHIWORKSについて</h2>
+      <p>KICHIWORKS（キチワークス）は、個人で運営する小さなアプリ工房です。「自分が欲しい道具を、ちゃんと使える形に」をモットーに、学習アプリと趣味のツールを開発・公開しています。どのアプリもブラウザだけで動作し、面倒な登録なしにすぐ試せます。</p>
+    </section>
+
+    <footer>
+      <p>お問い合わせ：<a href="mailto:support@kichiworks.com">support@kichiworks.com</a></p>
+      <p style="margin-top: 6px;">© 2026 KICHIWORKS（キチワークス）</p>
+    </footer>
+  </div>
+</body>
+</html>
